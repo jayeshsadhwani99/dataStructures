@@ -1,6 +1,11 @@
 #include<stdlib.h>
 #include<stdio.h>
 
+// Why do we use (n-2) in all the loops?
+// This is because we are using the position.
+// Cause of this, the total elements are (n-1).
+// We handle the head seperately, so we use (n-2)
+
 // A structure for a node,
 // which contains a data and a 
 // pointer to the next node.
