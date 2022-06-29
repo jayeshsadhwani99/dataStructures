@@ -84,3 +84,17 @@ it's better to iterate over them, than to print them recursively, because,
 
 1. When we print iteratively, we only use one temporary variable.
 2. When we print using recursion, we use a lot of memory in the stack.
+
+## Doubly Linked List
+
+A doubly linked list is a linked data structure that consists of a set of sequentially linked records called nodes. Each node contains three fields: two link fields and one data field.
+
+It is just like a linked list or singly linked list, except it has a pointer for the previous node too.
+
+### Advantages
+
+- Reverse lookup
+
+### Disadvantages
+
+- Use extra memory for pointer at previous node
