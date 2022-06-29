@@ -98,3 +98,37 @@ It is just like a linked list or singly linked list, except it has a pointer for
 ### Disadvantages
 
 - Use extra memory for pointer at previous node
+
+## Stack (LIFO)
+
+A list with a restriction that insertion and deletion
+can be performed only from one end, called the top
+
+### Operations
+
+1. Push -
+
+   This is basically insertion
+
+2. Pop -
+
+   This is removing the most recent item from the stack
+
+3. Top -
+
+   Returns element at the top of the stack
+
+4. isEmpty -
+
+   Check if a stack if empty
+
+All of the operations in a stack take constant time,
+or their big O notation is **O(n)**
+
+> Stack is called a Last In First Out (LIFO) structure
+
+### Applications
+
+- Function calls/Recursion
+- Perform undo in an editor
+- Balenced paranthesis in a compiler
