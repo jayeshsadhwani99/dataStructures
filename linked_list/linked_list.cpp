@@ -16,7 +16,7 @@ using namespace std;
 // pointer to the next node.
 struct Node {
     int data;
-    struct Node* next;
+    Node* next;
 };
 
 // A pointer to the first node of the list.
