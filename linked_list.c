@@ -48,6 +48,37 @@ void insertAtPosition(int value, int position) {
     (*temp_2).next = temp;
 }
 
+void delete(int position) {
+    // Let the node to be deleted be n
+    struct Node* temp = head;
+
+    // Delete the head node (the first node)
+    if(position == 1) {
+        // point head to the second node
+        head = (*temp).next;
+        free(temp);
+        return;
+    }
+
+    // Go to the (n-1)th node
+    for(int i = 0; i < position-2; i++) {
+        // point temp to the (n-1)th node
+        temp = (*temp).next;
+    }
+
+    // point to the nth node
+    struct Node* nth_node = (*temp).next;
+    
+    // point the (n-1)th node to the (n+1)th node
+    // this means, deleting the link to the nth element
+    // from the list
+    (*temp).next = (*nth_node).next;
+
+    // Delete the memory allocated to
+    // the nth node (the element to be deleted)
+    free(nth_node); // delete nth_node
+}
+
 void traverseList() {
     struct Node *temp = head;
 
@@ -81,8 +112,25 @@ void askForInput() {
     }
 }
 
+void delete_input() {
+    int delete_position, delete_more;
+    printf("Enter the position you want to delete: ");
+    scanf("%d", &delete_position);
+
+    delete(delete_position);
+    traverseList();
+
+    printf("Want to delete more values? (1 for yes, 0 for no): ");
+    scanf("%d", &delete_more);
+
+    if(delete_more) {
+        delete_input();
+    }
+}
+
 
 int main() {
+    int delete_el;
     // The value in the pointer is NULL
     // This just means that the list is empty
     head = NULL;
@@ -90,6 +138,12 @@ int main() {
     askForInput();
     traverseList();
 
-    return 0;
+    printf("Want to delete elements? (1 for yes, 0 for no): ");
+    scanf("%d", &delete_el);
 
+    if(delete_el) {
+        delete_input();
+    }
+
+    return 0;
 }
