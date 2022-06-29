@@ -46,6 +46,8 @@ We create the new array, double the size of the previous array and copy previous
 
    This would take **Constant Time O(1)**
 
+   Address of A[i] = base_address + i \* bytes_taken
+
 2. Insert -
 
 - When adding at the end, it would take constant time, when full, **O(n)**
@@ -58,3 +60,21 @@ We create the new array, double the size of the previous array and copy previous
    Similar to insert, so, **O(n)**
 
 Though good enough, **Arrays** aren't the best implementation of a dynamic list
+
+## Linked Lists
+
+A linked list is a sequence of data structures, which are connected together via links. Linked List is a sequence of links which contains items. Each link contains a connection to another link.
+
+**Head Node**: The first element of a linked list
+
+Address of the head node gives us the access to the complete list
+
+- Access:
+
+  Unlike an array we cannot access elements in constant time
+
+  The time taken to access the elements would be proportional to the size of the array, **O(n)**
+
+- Insertion:
+
+  **O(n)** complexity, but we won't have to shift the elements like in an array
