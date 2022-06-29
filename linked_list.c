@@ -28,6 +28,26 @@ void insertToStart(int x) {
     head = temp;
 }
 
+void insertAtPosition(int value, int position) {
+   struct Node* temp = (struct Node*)malloc(sizeof(struct Node));
+    (*temp).data = value;
+    (*temp).next = NULL;
+
+    // If the element is the first one
+    if(position == 1) {
+        (*temp).next = head;
+        head = temp;
+        return;
+    }
+
+    struct Node* temp_2 = head;
+    for(int i =0; i < position-2; i++) {
+        temp_2 = (*temp_2).next;
+    }
+    (*temp).next = (*temp_2).next;
+    (*temp_2).next = temp;
+}
+
 void traverseList() {
     struct Node *temp = head;
 
@@ -42,12 +62,16 @@ void traverseList() {
 
 // A recusive function to add values to the list.
 void askForInput() {
-    int input, more;
+    int input, more, position;
 
     printf("Enter the value you want to input: ");
     scanf("%d", &input);
 
-    insertToStart(input);
+    printf("Enter the position you want to input value in: ");
+    scanf("%d", &position);
+
+    // insertToStart(input);
+    insertAtPosition(input, position);
 
     printf("Want to enter more values? (1 for yes, 0 for no): ");
     scanf("%d", &more);
