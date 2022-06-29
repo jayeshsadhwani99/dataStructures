@@ -78,3 +78,9 @@ Address of the head node gives us the access to the complete list
 - Insertion:
 
   **O(n)** complexity, but we won't have to shift the elements like in an array
+
+While traversing the elements of a linked list,
+it's better to iterate over them, than to print them recursively, because,
+
+1. When we print iteratively, we only use one temporary variable.
+2. When we print using recursion, we use a lot of memory in the stack.
