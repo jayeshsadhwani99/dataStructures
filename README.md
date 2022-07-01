@@ -329,9 +329,39 @@ A type of binary tree in which each node, value of all the nodes in left subtree
 The search operation has the complexity of **O(log<sub>2</sub>n)**
 
 > The search we perform in this tree is a binary search and hence, the name.
-
+>
 > To prevent the worst case, we can keep the tree balanced.
-
+>
 > To insert data, we search with log complexity, and we just add the place
 
 During insertion and deletion, the balance of the tree is disturbed and there are ways of restoring it.
+
+## Tree Traversal
+
+It is the process of visiting(reading/ processing data in the node) each node in the tree exactly once in some order.
+
+Based on the order in which nodes are visited, they can be classified into:
+
+1. Breadth-First
+
+   This is called level-order traversal and here we traverse by levels.
+
+2. Depth-First
+
+   Here the core idea is that when we visit a child, we visit the whole sub-tree.
+
+   Based on the relative order of left sub-tree, right sub-tree and root, we have different depth-first approaches:
+
+   1. **Preorder Traversal**
+
+      root -> left -> right
+
+   2. **Inorder Traversal**
+
+      left -> root -> right
+
+      > Inorder traversal of a binary search tree will give us a sorted list. This is because the left data is lesser and in Inorder traversal we start traversing from the left, that is ascending order.
+
+   3. **Postorder Traversal**
+
+      left -> right -> root
