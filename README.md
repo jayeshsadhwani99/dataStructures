@@ -255,3 +255,10 @@ A collection of entities called nodes, linked together to simulate a heirarchy.
 4. Height of x: Number of edges in longest path from x to a leaf.
 
    > Height of tree is the height of the root node.
+
+### Applications
+
+- Storing naturally heirarichal data, like file system.
+- Organize data for quick search, insertion and deletion.
+- A special kind of tree, **Trie** is used to store a dictionary and is used for dynamic spell checking.
+- Used in Network Routing Algorithms.
