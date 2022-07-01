@@ -216,3 +216,8 @@ All of the operations in a queue take constant time,
 or their big O notation is **O(n)**
 
 > Queue is called a First In First Out (FIFO) structure
+
+### Applications
+
+- We have a shared resource but it can only take one request at a time
+- Process Scheduling
