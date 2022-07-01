@@ -322,7 +322,7 @@ We can implement binary trees in the following ways:
    >
    > right-child-index = 2i + 2
 
-## Binary Seach Tree
+## Binary Seach Tree (BST)
 
 A type of binary tree in which each node, value of all the nodes in left subtree is lesser or equal(to handle duplicates) and value of all the nodes in right subtree is greater.
 
