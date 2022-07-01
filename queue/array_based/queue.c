@@ -74,6 +74,9 @@ int dequeue() {
     return element;
 }
 
+// This means return the element
+// in front of the queue, that is,
+// the first element
 int peek() {
     return A[front];
 }
