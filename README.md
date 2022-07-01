@@ -221,3 +221,37 @@ or their big O notation is **O(n)**
 
 - We have a shared resource but it can only take one request at a time
 - Process Scheduling
+
+## Tree
+
+A collection of entities called nodes, linked together to simulate a heirarchy.
+
+- It is a non-linear, heirarchial data structure
+- Top-most node is called the **root** of the tree, it is the only node without a parent.
+- Each node contains data and link/reference to some other node, called it's **Children**
+- Node which has children is called a **Parent Node**.
+- Nodes with the same parent are called **Sibling Nodes**
+- When a node has a direct link to another node, we have a **parent-child** relationship
+- Nodes that do not have children are called **Leaf Nodes**. All other nodes are called **Internal Nodes**
+- We can only move from parent -> Child in a tree
+- If we can go from A to B, A is the **Ancestor** of B and B is the **Descendant** of A.
+
+### Properties
+
+1. It can be called a **recursive data structure**.
+
+   It consists of a distinguished node called root and some sub-trees, and the arrangement is such that root of the tree contains link to all of the root's sub-trees.
+
+   > Recursion is basically reducing something in a self similar manner. This property of trees is used everywhere.
+
+2. In a tree with N nodes, there will exactly be **(N-1) links/ edges**
+
+   All nodes will have exactly _one_ incoming edge/link, except the root.
+
+3. Depth of x: Length of the path from root to x, or, number of edges in path from root to x.
+
+   > The depth for root node will be 0.
+
+4. Height of x: Number of edges in longest path from x to a leaf.
+
+   > Height of tree is the height of the root node.
