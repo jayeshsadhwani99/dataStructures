@@ -256,6 +256,10 @@ A collection of entities called nodes, linked together to simulate a heirarchy.
 
    > Height of tree is the height of the root node.
 
+   > Height of an empty tree is -1.
+
+   > Height of a tree with 1 node is 0.
+
 ### Applications
 
 - Storing naturally heirarichal data, like file system.
@@ -271,3 +275,49 @@ One child is called the left child, the other, the right child.
 ### Strict binary tree
 
 A binary tree where each node has either 2 or 0 child nodes.
+
+### Complete binary tree
+
+A binary tree where all levels except the possibly last are completely filled and all nodes are as far left as possible.
+
+> Max number of nodes at level i = 2^i
+
+### Perfect Binary tree
+
+A binary tree where all levels will be completely filled.
+
+Maximum number of nodes in a binary tree with height h will be
+
+= 2<sup>0</sup> + 2<sup>1</sup> + 2<sup>2</sup> + .... + 2<sup>h</sup>
+
+= 2<sup>h+1</sup> - 1
+
+= 2<sup>number of levels</sup> - 1
+
+> Height of a complete binary tree with _n_ nodes,
+>
+> log<sub>2</sub>(n+1) - 1
+
+> Min height possible:
+> log<sub>2</sub>n
+>
+> Max height possible:
+> n-1
+
+### Balanced binary tree
+
+For a binary tree, if the height of left and right subtree for every node is not more than K (mostly 1).
+
+> difference = h<sub>left</sub> - h<sub>right</sub>
+
+### Implementation
+
+We can implement binary trees in the following ways:
+
+1. **Dynamically created nodes** linked to each other using pointers or references.
+2. In some special cases, we can use arrays - They are used to implement heaps.
+   > For node at index i, for a complete binary tree,
+   >
+   > left-child-index = 2i + 1
+   >
+   > right-child-index = 2i + 2
