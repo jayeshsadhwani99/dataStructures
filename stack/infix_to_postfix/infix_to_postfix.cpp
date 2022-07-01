@@ -47,6 +47,14 @@ bool hasHigherPrecendence(char top, char val) {
     }
 }
 
+bool isOpeningParanthesis(char ch) {
+    return (ch == '(' || ch == '{' || ch == '[');
+}
+
+bool isClosingParanthesis(char ch) {
+    return (ch == ')' || ch == '}' || ch == ']');
+}
+
 string infixToPostfix(char *exp, int length) {
     // Stack to put the values in
     stack <char> s;
@@ -64,14 +72,31 @@ string infixToPostfix(char *exp, int length) {
         } else if(isOperator(c)) {
             // Check the stack for any higher
             // precedence operator
-            while(!s.empty() && hasHigherPrecendence(s.top(), c)) {
+            while(!s.empty() 
+                && !isOpeningParanthesis(s.top()) 
+                && hasHigherPrecendence(s.top(), c)
+            ) {
                 result += s.top();
                 s.pop();
             }
 
             // Push the current operator in the stack
             s.push(c);
-        } else {
+        } else if(isOpeningParanthesis(c)) {
+            // Push to the stack
+            s.push(c);
+        } else if(isClosingParanthesis(c)) {
+            // Pop the stack until we find the
+            // opening paranthesis
+            while(!s.empty() && !isOpeningParanthesis(s.top())) {
+                result += s.top();
+                s.pop();
+            }
+            
+            // Pop the opening paranthesis
+            s.pop();
+        }
+        else {
             printf("Invalid character\n");
             return NULL;
         }
