@@ -262,3 +262,12 @@ A collection of entities called nodes, linked together to simulate a heirarchy.
 - Organize data for quick search, insertion and deletion.
 - A special kind of tree, **Trie** is used to store a dictionary and is used for dynamic spell checking.
 - Used in Network Routing Algorithms.
+
+## Binary Tree
+
+A type of tree where each node can have _atmost_ 2 children.
+One child is called the left child, the other, the right child.
+
+### Strict binary tree
+
+A binary tree where each node has either 2 or 0 child nodes.
