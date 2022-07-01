@@ -321,3 +321,17 @@ We can implement binary trees in the following ways:
    > left-child-index = 2i + 1
    >
    > right-child-index = 2i + 2
+
+## Binary Seach Tree
+
+A type of binary tree in which each node, value of all the nodes in left subtree is lesser or equal(to handle duplicates) and value of all the nodes in right subtree is greater.
+
+The search operation has the complexity of **O(log<sub>2</sub>n)**
+
+> The search we perform in this tree is a binary search and hence, the name.
+
+> To prevent the worst case, we can keep the tree balanced.
+
+> To insert data, we search with log complexity, and we just add the place
+
+During insertion and deletion, the balance of the tree is disturbed and there are ways of restoring it.
