@@ -315,7 +315,7 @@ For a binary tree, if the height of left and right subtree for every node is not
 We can implement binary trees in the following ways:
 
 1. **Dynamically created nodes** linked to each other using pointers or references.
-2. In some special cases, we can use arrays - They are used to implement heaps.
+2. In some special cases, we can use **arrays** - They are used to implement heaps.
    > For node at index i, for a complete binary tree,
    >
    > left-child-index = 2i + 1
