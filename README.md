@@ -348,7 +348,15 @@ Based on the order in which nodes are visited, they can be classified into:
 
 2. Depth-First
 
-   Here the core idea is that when we visit a child, we visit the whole sub-tree.
+   Here the core idea is that when we visit a child, we visit the whole sub-tree. The code here is relatively simple, and very intuitive through recursion.
+
+   Time complexity of all these algorithms is O(n).
+
+   Space complexity of all these algorithms is O(h). Where, h is the height of the binary tree.
+
+   > In the worst case, O(n)
+   >
+   > In the best/average case, O(log n)
 
    Based on the relative order of left sub-tree, right sub-tree and root, we have different depth-first approaches:
 
