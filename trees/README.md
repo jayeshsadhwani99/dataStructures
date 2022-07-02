@@ -169,3 +169,17 @@ There can be three cases when we try and delete a node, and we handle them all s
    1. We find the min value in the right subtree and copy the value in the targetted node. We now delete the duplicate node by a recursive function and reducing it to any of the above 2 conditions.
 
    2. We find the max value in the left subtree and copy the value in the targetted node. We now delete the duplicate node by a recursive function and reducing it to any of the above 2 conditions.
+
+## Inorder Successor
+
+The next element we get when we are performing inorder traversal of the tree, that is find the next gratest element in the tree.
+
+There are 2 possiblities when finding the inorder successor:
+
+1. The target node has a right subtree
+
+   To find the next element, we can just go the deepest in the right sub-tree, or, find the min value in the right sub-tree.
+
+2. There is no right subtree
+
+   In this case, the parent node might already have been visited, so, we go to the nearest ancestor for which the given node would be in the left subtree.
