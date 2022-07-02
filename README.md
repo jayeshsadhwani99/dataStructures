@@ -1,5 +1,9 @@
 # Data Structures
 
+This document accompanies and was written with the help of this [video](https://www.youtube.com/watch?v=B31LgI4Y4DQ).
+
+I'll add the timestamps for the snippets too.
+
 A data structure is a way to store and organinze data
 in a computer, so that it can be used effectively
 
