@@ -600,3 +600,35 @@ We can store the graph in the computer's memory in different ways. Here we analy
    If we take a look at that in terms of number of vertices, the time complexity would be
 
    `O(|V| * |V|)`, this is because the maximum number of edges is n(n-1), which is costly.
+
+2. **Adjacency Matrix**
+
+   Here, instead of having an edge list, we store the data in a matrix (2-D array), called the adjecency matrix.
+
+   Here we fill in the values as,
+
+   for A<sub>ij</sub>,
+
+   ```
+   1 - if an edge exists from i to j
+
+   0 - otherwise
+   ```
+
+   If we introduce weights, then, instead of 1, we can use a weight for each edge and we just put all the empty values as infinity or -infinity.
+
+   Here the time complexity will be really good for both the operations,
+
+   1. Find nodes to adjecent nodes -
+
+      `O(|V|)`
+
+   2. Find if two given nodes are connected -
+
+      `O(1)`
+
+   Another advantage is that if we wanna compute for a undirectional matrix, we only have to look at half the matrix.
+
+   The drawback to this is that it requires a lot of memory, or the space complexity for this representation is `O(|V|`<sup>`2`</sup>`)`
+
+   Thus, we only use adjecency matrix if the graph is dense, for a sparse graph, which is most of the graphs in real life, we cannot use a adjecency matrix.
