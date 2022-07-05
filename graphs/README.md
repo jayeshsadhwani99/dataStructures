@@ -139,3 +139,50 @@ Examples:
 - **Simple Cycle** - A simple cycle is a closed walk in which there is no repetition except the start and end vertices.
 
 - **Acyclic graph** - A graph with no cycle. A tree would be an example of an acyclic graph.
+
+## Graph Representation
+
+We can store the graph in the computer's memory in different ways. Here we analyse the time and space complexity of different methods:
+
+1. **Edge List**
+
+   We create 2 lists,
+
+   1. To store vertices
+   2. To store edges
+
+   Vertices can be a simple string, and in a realistic scenario the strings won't be very long, so the space complexity will be proportional to the number of vertices.
+
+   For edges, we can store it in the form
+
+   ```c
+      struct Edge {
+         int start_vertex;
+         int end_vertex;
+         int weight;
+      }
+   ```
+
+   Here, the space complexity would be propoortional to the number of edges.
+
+   Hence, the total space complexity of storing a graph would be `O(|V| + |E|)`
+
+   We cannot do a lot better if we want to store a graph in the memory. So we are good with the memory usage.
+
+   For **Time complexity**,
+
+   The most frequently performed operations would be-
+
+   1. Find nodes adjecent to given nodes-
+      For this specific case, we would have to scan the whole edge list. We will have to perform a linear search.
+
+      Time complexity for this operation will be `O(|E|)`
+
+   2. Find if two given nodes are connected -
+      Similar to the previous case, here too, we will have to perform a linear search.
+
+      Thus, time complexity for this operation will also be `O(|E|)`
+
+   If we take a look at that in terms of number of vertices, the time complexity would be
+
+   `O(|V| * |V|)`, this is because the maximum number of edges is n(n-1), which is costly.
