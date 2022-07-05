@@ -632,3 +632,21 @@ We can store the graph in the computer's memory in different ways. Here we analy
    The drawback to this is that it requires a lot of memory, or the space complexity for this representation is `O(|V|`<sup>`2`</sup>`)`
 
    Thus, we only use adjecency matrix if the graph is dense, for a sparse graph, which is most of the graphs in real life, we cannot use a adjecency matrix.
+
+3. **Adjacency List**
+
+   The problem with adjecency matrix is that it requires a lot of space. Adjecency list somewhat solves this issue.
+
+   We know that most of the graphs are sparse. So, instead of storing if the value exists in the index of the column, we can directly store which element exists in an array where the indexes don't mean anything.
+
+   This would solve the space problem and the time complexity would also remain almost the same.
+
+   1. Find nodes to adjecent nodes -
+
+      `O(|V|)`
+
+   2. Find if two given nodes are connected -
+
+      `O(|V|)`
+
+   Here, to increase the performance, instead of storing the values as an array, we can store them in a linked list or even a binary tree.
