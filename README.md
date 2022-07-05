@@ -475,3 +475,81 @@ Examples:
 3. Web crawling - This is just basically graph traversal to reccommend good search results.
 4. Intercity road networks - Weighted undirected graph.
 5. Intracity road networks - Weighted directed graphs: This is because there can be one-way roads in a city.
+
+### Properties
+
+- Self loop:
+
+  An edge is called a self loop, or a self edge, if it only involves one vertex. These complicate algorithms and make working with graphs difficult.
+
+  These can be seen in webpages, where a webpage links to itself.
+
+- Multiedge / Parallel edge:
+  An edge is called a multiedge, if it occurs more than once in a graph.
+
+  These can be seen if we are modelling a flight network using graphs.
+
+- If a graph doesn't have a self loop or a multi edge, then it is called a **simple graph**.
+
+- Number of edges:
+
+  Minimum number of edges for a graph = 0
+
+  These can be calculated for a simple graph, cause if self loops are multi loops get involved, we obviously won't be able to calculate.
+
+  1.  Directed-
+
+      Here, we will have a directed edge from one node to every other node.
+
+      So, in general,
+
+      If |V| = n,
+
+      then, for number of edges, E
+
+      0 <= E <= n(n-1)
+
+  2.  Undirected -
+
+      Here, we will have only one edge from one node to another,
+
+      So, similar to a directed graph,
+
+      If |V| = n,
+
+      then, for number of edges, E
+
+      0 <= E <= n(n-1) / 2
+
+- If the number of edges in a graph are close to the sqaure of it's number of nodes, that is the maximum number of edges, then it is called a **dense graph**.
+
+- If the number of edges in a graph is really less, we call it a **sparse graph**. Typically, close to the number of vertices.
+
+- **Path** - a sequence of vertices where each adjecent pair is connected by an edge.
+
+  In a directed graph, all edges must also be aligned in one direction, the direction of path.
+
+  - **Simple path** - a path in which no vertices, and hence, no edges are repeated.
+
+  Most of the time when we say path, we mean a simple path. So, for the actual path, we use the term **walk**, and thus, the defination of a simple path becomes,
+
+  A _walk_ in which no vertices, and hence, no edges are repeated.
+
+  - **Trial** - a _walk_ in which no edges are repeated.
+
+  If a trail is possible between two vertices, then certainly a simple path, or just a path is also possible.
+
+- **Strongly Connected Graph** - A graph is called a strongly connected graph, if there is a path from any vertex to any other vertex.
+
+  - If it's an undirected graph, we simply call it connected
+  - If it's a directed graph, we call it strongly connected.
+
+- **Weakly Connected Graphs** - If a directed graph is not strongly connected, but can be by treating all the edges as undirected, then it is called a weakly connected graph.
+
+- **Closed walk** - If a walk starts and ends at the same vertex and the length of the walk(number of edges in the walk) is > 0.
+
+  Some use the term **cycle** for a closed walk, but the term _cycle_ generally refers to a simple cycle.
+
+- **Simple Cycle** - A simple cycle is a closed walk in which there is no repetition except the start and end vertices.
+
+- **Acyclic graph** - A graph with no cycle. A tree would be an example of an acyclic graph.
